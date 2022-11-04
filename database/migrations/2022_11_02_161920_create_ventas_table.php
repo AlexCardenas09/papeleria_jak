@@ -20,6 +20,9 @@ class CreateVentasTable extends Migration
             $table->int('cantidad');
             $table->string('caracteristica');
             $table->date('fechaCompra');
+            $table->string('email');
+
+            $table->foreign('cliente_id')->references('id')->on('cliente');
             
         });
     }

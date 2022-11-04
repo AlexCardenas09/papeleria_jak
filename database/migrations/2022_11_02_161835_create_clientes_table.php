@@ -20,6 +20,8 @@ class CreateClientesTable extends Migration
             $table->string('numeroContacto');
             $table->string('correo');
             $table->string('ciudad');
+
+            $table->foreign('productos_id')->references('id')->on('productos');
         });
     }
 
