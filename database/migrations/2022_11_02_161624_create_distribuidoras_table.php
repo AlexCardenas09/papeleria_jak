@@ -15,7 +15,13 @@ class CreateDistribuidorasTable extends Migration
     {
         Schema::create('distribuidoras', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nombreProveedor');
+            $table->string('razonSocial');
+            $table->string('numeroContacto');
+            $table->string('ciudad');
+
+            
+            
         });
     }
 
