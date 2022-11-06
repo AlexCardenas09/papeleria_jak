@@ -20,8 +20,6 @@ class CreateDistribuidorasTable extends Migration
             $table->string('numeroContacto');
             $table->string('ciudad');
 
-            
-            
         });
     }
 

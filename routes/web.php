@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//rutas distribuidoras
+Route::get('/api/distribuidoras/index', [DistribuidoresController::class, 'index']);//read-select '/api/distribuidoras/""' traer datos
+Route::get('/api/distribuidoras/getSelect', [DistribuidoresController::class, 'getSelect']);//para seleccionar otros datos
+Route::post('/api/distribuidoras/guardar', [DistribuidoresController::class, 'guardarDistri']);
+Route::put('/api/distribuidoras/actulizar', [DistribuidoresController::class, 'update']);
+Route::post('/api/distribuidoras/eliminar', [DistribuidoresController::class, 'destroy']);
